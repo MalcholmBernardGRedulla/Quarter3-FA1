@@ -1,5 +1,8 @@
-var FN = prompt("Type your first name: ");
-var LN = prompt("Type your last name: ");
-var BY = parseInt(prompt("Type your birth year: "));
+let firstName = prompt("Enter your first name:");
+let lastName = prompt("Enter your last name:");
+let birthYear = parseInt(prompt("Enter your birth year:"), 10);
 
-document.getElementById("GFA").innerText="Hello " +FN+ " " +LN+"! How does it feel to be " +(2025-BY)+ " years old?";
+let currentYear = new Date().getFullYear();
+let age = currentYear - birthYear;
+
+document.write(`Hello ${firstName} ${lastName}! How does it feel to be ${age} years old?`);
